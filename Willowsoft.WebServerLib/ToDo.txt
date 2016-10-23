@@ -1,0 +1,62 @@
+﻿ToDo.txt
+========
+
+* Fixes
+
+Pass IDiagOutput into WebContextBase. DONE.
+Give the assemblies strong names. DONE.
+Handle session security. DONE.
+Handle session expiration. DONE.
+Pass back correct HTTP status 501 for unsupported HTTP verbs. DONE.
+Make better error page content like for status 404. DONE.
+Make everything threadsafe. DONE.
+  Session manipulation. DONE.
+  App variable manipulation. DONE.
+Support all POST body formats. DONE.
+Support chunked transfer encoding in response. DONE.
+
+Make file uploading more efficient (MemoryStream?).
+Support chunked transfer encoding in request.
+Make sure all appropriate headers are being sent.
+Make WebResponse.WriteBody(,string) use the correct encoder instead of assumingh UTF8.
+
+* Essential Features
+
+Support different character encodings.
+Logging interface.
+Redirection support.
+Cache control support.
+Configure web server via separate XML file.
+Store instance specific config info in separate XML file.
+Support web sites not at the root URL path.
+Add .wsp pages: XHTML inline content, with back end code able to modify the content.
+Add .wbin pages: XML file containing only type name, which generates entire content.
+Automated unit tests.
+Create a WiX installer.
+
+* Cool Features
+
+Event or callback model for responding to UI postback events.
+Validators that are sharable between multiple input elements.
+Support for a "data" folder that maps to "App_Data" in ASP.NET.
+General purpose content generation API.
+Browser type recognition.
+Support SSL.
+Put each WebSite in a separate AppDomain.
+Abort requests that take too long to execute.
+Page type that generates graphics.
+Something like master pages or page templates.
+Create pre-compiled binary for web server that runs as a user process.
+Create pre-compiled binary for web server that runs as a windows service.
+Support for forms based authentication.
+Lightweight CMS.
+Plugin API for adding features.
+API to provide HTML based administrative GUI for intrinsic features or plugins.
+Support for caching page instances in the session and reusing them.
+Purge cached page instances when the session is purged.
+
+* Documentation
+
+Create an architecture document.
+Add source code XML comments and generate reference documentation.
+Create several sample web sites.

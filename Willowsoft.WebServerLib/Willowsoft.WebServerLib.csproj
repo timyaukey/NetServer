@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Willowsoft.WebServerLib</RootNamespace>
+    <AssemblyName>Willowsoft.WebServerLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Willowsoft.WebServerLib.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AspNetHttpHandler.cs" />
+    <Compile Include="AspNetHttpModule.cs" />
+    <Compile Include="Pages\BytesBodyWriter.cs" />
+    <Compile Include="HttpHeaders.cs" />
+    <Compile Include="HttpStatus.cs" />
+    <Compile Include="HttpVerbs.cs" />
+    <Compile Include="Pages\IBodyWriter.cs" />
+    <Compile Include="Pages\WebPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Pages\IWebPageFactory.cs" />
+    <Compile Include="Pages\IWebPageHandler.cs" />
+    <Compile Include="IWebServerUtilities.cs" />
+    <Compile Include="IWebSiteExecutor.cs" />
+    <Compile Include="Sites\IWebSiteUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pages\TextBodyWriter.cs" />
+    <Compile Include="Sites\WebSiteDataSimple.cs" />
+    <Compile Include="WebContext.cs" />
+    <Compile Include="WebContextBase.cs" />
+    <Compile Include="WebExceptions.cs" />
+    <Compile Include="WebRequest.cs" />
+    <Compile Include="WebResponse.cs" />
+    <Compile Include="WebServer.cs" />
+    <Compile Include="WebSessionContainer.cs" />
+    <Compile Include="Sites\WebSite.cs" />
+    <Compile Include="Sites\WebSiteData.cs" />
+    <Compile Include="Sites\WebSiteSimple.cs" />
+    <Compile Include="WebUploadedFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServerLib\Willowsoft.ServerLib.csproj">
+      <Project>{A97D97A5-31F6-496A-B7E6-FF9BF51F53DE}</Project>
+      <Name>Willowsoft.ServerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Willowsoft.WebServerLib.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

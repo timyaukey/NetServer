@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AEB47E1D-46F3-42EE-ABA3-6A00A71642ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetServer</RootNamespace>
+    <AssemblyName>CmdLineHost</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleWebApp\Willowsoft.SampleWebApp.csproj">
+      <Project>{0C4C49BC-7C61-45AC-A6DE-5FC66E535C2E}</Project>
+      <Name>Willowsoft.SampleWebApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerLib\Willowsoft.ServerLib.csproj">
+      <Project>{A97D97A5-31F6-496A-B7E6-FF9BF51F53DE}</Project>
+      <Name>Willowsoft.ServerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebContentLib\Willowsoft.WebContentLib.csproj">
+      <Project>{6C330708-A4BE-4CB2-9929-C693AEB84539}</Project>
+      <Name>Willowsoft.WebContentLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Willowsoft.WebServerLib\Willowsoft.WebServerLib.csproj">
+      <Project>{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}</Project>
+      <Name>Willowsoft.WebServerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteRoot\bird_turkey.jpg" />
+    <Content Include="SiteRoot\index.html" />
+    <Content Include="SiteRoot\index2.html" />
+    <Content Include="SiteRoot\posttest.html" />
+    <Content Include="SiteRoot\posttest2.html" />
+    <Content Include="SiteRoot\posttest3.html" />
+    <Content Include="SiteRoot\redyellow.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CmdLineHostSimple</RootNamespace>
+    <AssemblyName>CmdLineHostSimple</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleWebApp\Willowsoft.SampleWebApp.csproj">
+      <Project>{0c4c49bc-7c61-45ac-a6de-5fc66e535c2e}</Project>
+      <Name>Willowsoft.SampleWebApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServerLib\Willowsoft.ServerLib.csproj">
+      <Project>{a97d97a5-31f6-496a-b7e6-ff9bf51f53de}</Project>
+      <Name>Willowsoft.ServerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebContentLib\Willowsoft.WebContentLib.csproj">
+      <Project>{6c330708-a4be-4cb2-9929-c693aeb84539}</Project>
+      <Name>Willowsoft.WebContentLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Willowsoft.WebServerLib\Willowsoft.WebServerLib.csproj">
+      <Project>{ba14813b-e5b4-4dfc-8823-1fb43d6d8095}</Project>
+      <Name>Willowsoft.WebServerLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteRoot\bird_turkey.jpg" />
+    <Content Include="SiteRoot\index.html" />
+    <Content Include="SiteRoot\index2.html" />
+    <Content Include="SiteRoot\posttest.html" />
+    <Content Include="SiteRoot\posttest2.html" />
+    <Content Include="SiteRoot\posttest3.html" />
+    <Content Include="SiteRoot\redyellow.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
