@@ -59,9 +59,9 @@ namespace Willowsoft.WebServerLib
                 string requestUri;
                 NameValueCollection queryArgs;
                 NameValueCollection requestHeaders;
-                WriteDiagMessage("ReadFirstLineStart socket=" + con.SocketHandle.ToString());
+                //WriteDiagMessage("ReadFirstLineStart socket=" + con.SocketHandle.ToString());
                 string commandLine = con.ReadAsciiLine();
-                WriteDiagMessage("ReadFirstLineEnd");
+                //WriteDiagMessage("ReadFirstLineEnd");
                 if (commandLine == null)
                 {
                     WriteDiagMessage("ReadFirstLineEOF");
@@ -305,11 +305,11 @@ namespace Willowsoft.WebServerLib
         private static NameValueCollection ReadAllHeaders(Connection con, IDiagOutput diagOutput)
         {
             bool connectionBroken;
-            diagOutput.WriteMessage("ReadAllHeadersStart socket=" + con.SocketHandle.ToString());
+            //diagOutput.WriteMessage("ReadAllHeadersStart socket=" + con.SocketHandle.ToString());
             NameValueCollection headers = ReadAllHeaders(con.Stream, out connectionBroken);
             if (connectionBroken)
                 con.ConnectionBroken = true;
-            diagOutput.WriteMessage("ReadAllHeadersEnd");
+            //diagOutput.WriteMessage("ReadAllHeadersEnd");
             return headers;
         }
 

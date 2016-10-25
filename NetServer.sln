@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Willowsoft.WebContentLib", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdLineHostSimple", "CmdLineHostSimple\CmdLineHostSimple.csproj", "{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServerTest", "WebServerTest\WebServerTest.csproj", "{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,16 @@ Global
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Release|x86.ActiveCfg = Release|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CB4647A7-A25E-4037-9820-9F53D2DCEFCA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
