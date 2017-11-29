@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdLineHost", "CmdLineHost\CmdLineHost.csproj", "{AEB47E1D-46F3-42EE-ABA3-6A00A71642ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Willowsoft.ServerLib", "ServerLib\Willowsoft.ServerLib.csproj", "{A97D97A5-31F6-496A-B7E6-FF9BF51F53DE}"
@@ -8,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Willowsoft.SampleWebApp", "SampleWebApp\Willowsoft.SampleWebApp.csproj", "{0C4C49BC-7C61-45AC-A6DE-5FC66E535C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Willowsoft.WebServerLib", "Willowsoft.WebServerLib\Willowsoft.WebServerLib.csproj", "{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Willowsoft.WebContentLib", "WebContentLib\Willowsoft.WebContentLib.csproj", "{6C330708-A4BE-4CB2-9929-C693AEB84539}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdLineHostSimple", "CmdLineHostSimple\CmdLineHostSimple.csproj", "{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}"
 EndProject
@@ -65,16 +65,6 @@ Global
 		{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{BA14813B-E5B4-4DFC-8823-1FB43D6D8095}.Release|x86.ActiveCfg = Release|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{6C330708-A4BE-4CB2-9929-C693AEB84539}.Release|x86.ActiveCfg = Release|Any CPU
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{821BF77B-21C6-4F78-BF15-FE7EE9C81BD3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

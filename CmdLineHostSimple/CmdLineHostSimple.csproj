@@ -56,10 +56,6 @@
       <Project>{a97d97a5-31f6-496a-b7e6-ff9bf51f53de}</Project>
       <Name>Willowsoft.ServerLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebContentLib\Willowsoft.WebContentLib.csproj">
-      <Project>{6c330708-a4be-4cb2-9929-c693aeb84539}</Project>
-      <Name>Willowsoft.WebContentLib</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Willowsoft.WebServerLib\Willowsoft.WebServerLib.csproj">
       <Project>{ba14813b-e5b4-4dfc-8823-1fb43d6d8095}</Project>
       <Name>Willowsoft.WebServerLib</Name>
