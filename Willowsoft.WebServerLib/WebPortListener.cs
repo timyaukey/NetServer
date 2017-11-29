@@ -68,7 +68,7 @@ namespace Willowsoft.WebServerLib
                     WriteDiagMessage("ReadFirstLineEOF");
                     throw new WebExceptions.BadRequest("Missing initial request line");
                 }
-                requestHeaders = ReadAllHeaders(con, DiagOutput);
+                requestHeaders = ReadAllHeaders(con);
                 string[] commandLineTokens = commandLine.Split(' ');
                 if (commandLineTokens.Length < 2)
                 {
@@ -81,38 +81,7 @@ namespace Willowsoft.WebServerLib
                 WebRequest request = new WebRequest(verb, requestHeaders, requestUri, absoluteUriPath,
                     queryArgs, con.RemoteAddress);
                 WebResponse response = new WebResponse(con, headersOnly);
-                if (request.Verb == HttpVerbs.Post)
-                {
-                    Stream bodyStream;
-                    string transferEncoding = requestHeaders.Get(HttpHeaders.TransferEncoding);
-                    if (transferEncoding == HttpHeaders.TransferEncoding_Identity || transferEncoding == null)
-                    {
-                        string contentLength = requestHeaders.Get(HttpHeaders.ContentLength);
-                        bodyStream = new ContentLengthStream(con.Stream, int.Parse(contentLength));
-                    }
-                    else
-                    {
-                        throw new WebExceptions.BadRequest(HttpHeaders.TransferEncoding + ":" + transferEncoding + " is not supported");
-                    }
-                    string contentType = requestHeaders.Get(HttpHeaders.ContentType);
-                    if (contentType == HttpHeaders.ContentType_WwwFormUrlEncoded)
-                    {
-                        string body = con.ReadAsciiUntilEnd(bodyStream);
-                        if (body == null)
-                        {
-                            throw new WebExceptions.BadRequest("Missing POST body");
-                        }
-                        request.PostVars = ParseNameValuePairs(body);
-                    }
-                    else if (contentType.StartsWith(HttpHeaders.ContentType_MultiPartFormData))
-                    {
-                        ReadMultiPartFormData(con, request, contentType, bodyStream);
-                    }
-                    else
-                    {
-                        throw new WebExceptions.BadRequest(HttpHeaders.ContentType + ":" + contentType + " is not supported");
-                    }
-                }
+                ReadBody(con, request);
                 IWebSiteExecutor requestedSite;
                 if (!_Sites.TryGetValue(request.HostName, out requestedSite))
                 {
@@ -303,7 +272,7 @@ namespace Willowsoft.WebServerLib
             col.Add(name, value);
         }
 
-        private static NameValueCollection ReadAllHeaders(Connection con, IDiagOutput diagOutput)
+        private static NameValueCollection ReadAllHeaders(Connection con)
         {
             bool connectionBroken;
             //diagOutput.WriteMessage("ReadAllHeadersStart socket=" + con.SocketHandle.ToString());
@@ -362,6 +331,42 @@ namespace Willowsoft.WebServerLib
             string headerValue = completeHeader.Substring(colonPos + 1).TrimStart(' ');
             headers.Add(headerName, headerValue);
             //System.Console.Out.WriteLine("Header:{0} Value:{1}", headerName, headerValue);
+        }
+
+        private void ReadBody(Connection con, WebRequest request)
+        {
+            if (request.Verb == HttpVerbs.Post)
+            {
+                Stream bodyStream;
+                string transferEncoding = request.Headers.Get(HttpHeaders.TransferEncoding);
+                if (transferEncoding == HttpHeaders.TransferEncoding_Identity || transferEncoding == null)
+                {
+                    string contentLength = request.Headers.Get(HttpHeaders.ContentLength);
+                    bodyStream = new ContentLengthStream(con.Stream, int.Parse(contentLength));
+                }
+                else
+                {
+                    throw new WebExceptions.BadRequest(HttpHeaders.TransferEncoding + ":" + transferEncoding + " is not supported");
+                }
+                string contentType = request.Headers.Get(HttpHeaders.ContentType);
+                if (contentType == HttpHeaders.ContentType_WwwFormUrlEncoded)
+                {
+                    string body = con.ReadAsciiUntilEnd(bodyStream);
+                    if (body == null)
+                    {
+                        throw new WebExceptions.BadRequest("Missing POST body");
+                    }
+                    request.PostVars = ParseNameValuePairs(body);
+                }
+                else if (contentType.StartsWith(HttpHeaders.ContentType_MultiPartFormData))
+                {
+                    ReadMultiPartFormData(con, request, contentType, bodyStream);
+                }
+                else
+                {
+                    throw new WebExceptions.BadRequest(HttpHeaders.ContentType + ":" + contentType + " is not supported");
+                }
+            }
         }
 
         private void WriteHttpError(WebResponse response, HttpStatus status, Exception ex)
