@@ -10,6 +10,6 @@ namespace Willowsoft.WebServerLib
     /// </summary>
     public interface IWebSiteExecutor
     {
-        void ExecuteRequest(WebRequest request, WebResponse response, WebServer server);
+        void ExecuteRequest(WebRequest request, WebResponse response, WebPortListener server);
     }
 }

@@ -25,11 +25,10 @@ namespace NetServer
 
             CustomWebSite webSite = new CustomWebSite(siteRoot);
 
-            WebServer webServer = new WebServer(port);
+            WebServer webServer = new WebServer();
             webServer.DiagOutput = new ConsoleDiagOutput();
-            webServer.Add(webSite, "localhost");
+            webServer.Add("localhost", port, webSite);
 
-            webServer.Start();
             System.Console.Out.WriteLine("Press ENTER to exit...");
             System.Console.In.ReadLine();
             webServer.Stop();

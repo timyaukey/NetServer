@@ -65,7 +65,7 @@ namespace Willowsoft.WebServerLib
             AddPageHandlers(PageTypes<TSiteData, TSession>.StandardPageHandlers());
         }
 
-        public void ExecuteRequest(WebRequest request, WebResponse response, WebServer server)
+        public void ExecuteRequest(WebRequest request, WebResponse response, WebPortListener server)
         {
             WebSessionContainer<TSession> sessionContainer = _SiteData.GetSessionContainer(request, response);
             TSession session = sessionContainer.Session;
