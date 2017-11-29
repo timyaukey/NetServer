@@ -5,7 +5,6 @@ using System.Text;
 
 using Willowsoft.ServerLib;
 using Willowsoft.WebServerLib;
-using Willowsoft.WebContentLib;
 using Willowsoft.SampleWebApp;
 
 namespace NetServer
@@ -24,12 +23,7 @@ namespace NetServer
             System.Console.WriteLine("Port [" + port.ToString() + "]");
             System.Console.WriteLine("Home URL http://localhost:{0}/index.html", port);
 
-            WebSite<CustomSiteData, CustomSession> webSite = new WebSite<CustomSiteData, CustomSession>(siteRoot);
-            webSite.AddPageHandlers(PageTypes<CustomSiteData, CustomSession>.StandardPageHandlers());
-            // This debug page outputs members of CustomApplication and CustomSession.
-            webSite.AddEndsWithHandler(new CustomDebugPageFactory(), ".tdebug");
-            // Handle requests for URL "/special.mytype"
-            webSite.AddPathHandler(new CustomPage.Factory(), "/special.mytype");
+            CustomWebSite webSite = new CustomWebSite(siteRoot);
 
             WebServer webServer = new WebServer(port);
             webServer.DiagOutput = new ConsoleDiagOutput();

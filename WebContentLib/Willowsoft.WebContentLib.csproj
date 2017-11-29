@@ -47,14 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebugPage.cs" />
-    <Compile Include="DebugPageFactory.cs" />
-    <Compile Include="PageTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaticFilePage.cs" />
-    <Compile Include="StaticFilePageFactory.cs" />
-    <Compile Include="XmlBasePage.cs" />
-    <Compile Include="XmlBasePageFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerLib\Willowsoft.ServerLib.csproj">

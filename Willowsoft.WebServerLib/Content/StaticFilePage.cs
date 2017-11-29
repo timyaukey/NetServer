@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using Willowsoft.WebServerLib;
-
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     public class StaticFilePage<TSiteData, TSession> : WebPage<TSiteData, TSession>
         where TSiteData : WebSiteData<TSession>, new()

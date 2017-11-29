@@ -1,8 +1,6 @@
 ﻿using System;
 
-using Willowsoft.WebServerLib;
-
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     public class DebugPageFactory<TSiteData, TSession> : IWebPageFactory<TSiteData, TSession>
         where TSiteData : WebSiteData<TSession>, new()

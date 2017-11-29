@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Xml;
 
 using Willowsoft.ServerLib;
-using Willowsoft.WebServerLib;
-using Willowsoft.WebContentLib;
 
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     abstract public class XmlBasePageFactory<TSiteData, TSession, TXmlDocument> : IWebPageFactory<TSiteData, TSession>
         where TSiteData : WebSiteData<TSession>, new()

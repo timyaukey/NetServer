@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 
 using Willowsoft.ServerLib;
-using Willowsoft.WebServerLib;
 
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     public static class PageTypes<TSiteData, TSession>
         where TSiteData : WebSiteData<TSession>, new()

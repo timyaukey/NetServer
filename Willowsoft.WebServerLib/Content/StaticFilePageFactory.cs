@@ -1,8 +1,6 @@
 ﻿using System;
 
-using Willowsoft.WebServerLib;
-
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     public class StaticFilePageFactory<TSiteData, TSession> : IWebPageFactory<TSiteData, TSession>
         where TSiteData : WebSiteData<TSession>, new()

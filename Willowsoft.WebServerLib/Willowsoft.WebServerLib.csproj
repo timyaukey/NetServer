@@ -49,6 +49,13 @@
   <ItemGroup>
     <Compile Include="AspNetHttpHandler.cs" />
     <Compile Include="AspNetHttpModule.cs" />
+    <Compile Include="Content\DebugPage.cs" />
+    <Compile Include="Content\DebugPageFactory.cs" />
+    <Compile Include="Content\PageTypes.cs" />
+    <Compile Include="Content\StaticFilePage.cs" />
+    <Compile Include="Content\StaticFilePageFactory.cs" />
+    <Compile Include="Content\XmlBasePage.cs" />
+    <Compile Include="Content\XmlBasePageFactory.cs" />
     <Compile Include="Pages\BytesBodyWriter.cs" />
     <Compile Include="HttpHeaders.cs" />
     <Compile Include="HttpStatus.cs" />
@@ -89,6 +96,7 @@
   <ItemGroup>
     <None Include="Willowsoft.WebServerLib.snk" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -54,6 +54,7 @@
     <Compile Include="CustomPage.cs" />
     <Compile Include="CustomSession.cs" />
     <Compile Include="CustomSiteData.cs" />
+    <Compile Include="CustomWebSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

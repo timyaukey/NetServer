@@ -28,6 +28,7 @@ namespace Willowsoft.WebServerLib
             _SiteRoot = siteRoot;
             _WebPageHandlers = new List<IWebPageHandler<TSiteData, TSession>>();
             _SiteData = new TSiteData();
+            AddPageHandlers();
         }
 
         /// <summary>
@@ -57,6 +58,11 @@ namespace Willowsoft.WebServerLib
             {
                 _WebPageHandlers.Add(handler);
             }
+        }
+
+        protected virtual void AddPageHandlers()
+        {
+            AddPageHandlers(PageTypes<TSiteData, TSession>.StandardPageHandlers());
         }
 
         public void ExecuteRequest(WebRequest request, WebResponse response, WebServer server)

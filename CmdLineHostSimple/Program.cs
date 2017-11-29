@@ -5,7 +5,6 @@ using System.Text;
 
 using Willowsoft.ServerLib;
 using Willowsoft.WebServerLib;
-using Willowsoft.WebContentLib;
 using Willowsoft.SampleWebApp;
 
 namespace NetServer
@@ -23,7 +22,6 @@ namespace NetServer
             System.Console.WriteLine("Home URL http://localhost:{0}/index.html", port);
 
             WebSiteSimple webSite = new WebSiteSimple(siteRoot);
-            webSite.AddPageHandlers(PageTypes<WebSiteDataSimple, object>.StandardPageHandlers());
 
             WebServer webServer = new WebServer(port);
             webServer.DiagOutput = new ConsoleDiagOutput();

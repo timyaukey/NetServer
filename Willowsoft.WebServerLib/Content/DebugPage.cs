@@ -5,9 +5,8 @@ using System.Text;
 using System.Web;
 
 using Willowsoft.ServerLib;
-using Willowsoft.WebServerLib;
 
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     /// <summary>
     /// A web page that outputs standard debugging information instead of

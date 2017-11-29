@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 
 using Willowsoft.ServerLib;
-using Willowsoft.WebServerLib;
 
-namespace Willowsoft.WebContentLib
+namespace Willowsoft.WebServerLib
 {
     /// <summary>
     /// I don't believe this is actually used anywhere.
